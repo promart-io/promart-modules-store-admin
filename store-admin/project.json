@@ -1,0 +1,8 @@
+{
+  "guid": "store-admin",
+  "repository": {
+    "type": "git",
+    "branch": "master",
+    "url": "https://github.com/promart-io/promart-modules-store-admin.git"
+  }
+}
