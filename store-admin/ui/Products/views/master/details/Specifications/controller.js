@@ -28,6 +28,9 @@ angular.module('page')
 		onEntityRefresh: function(callback) {
 			on('store-admin.Products.Specifications.refresh', callback);
 		},
+		onProductsModified: function(callback) {
+			on('store-admin.Products.Products.modified', callback);
+		},
 		onProductsSelected: function(callback) {
 			on('store-admin.Products.Products.selected', callback);
 		},
@@ -39,12 +42,23 @@ angular.module('page')
 .controller('PageController', function ($scope, $http, $messageHub) {
 
 	var api = '../../../../../../../../../../services/v3/js/store-admin/api/Products/Specifications.js';
+	var productidOptionsApi = '../../../../../../../../../../services/v3/js/store-admin/api/Products/Products.js';
 
 	$scope.dateOptions = {
 		startingDay: 1
 	};
 	$scope.dateFormats = ['yyyy/MM/dd', 'dd-MMMM-yyyy', 'dd.MM.yyyy', 'shortDate'];
 	$scope.dateFormat = $scope.dateFormats[0];
+
+	$scope.productidOptions = [];
+
+	function productidOptionsLoad() {
+		$http.get(productidOptionsApi)
+		.success(function(data) {
+			$scope.productidOptions = data;
+		});
+	}
+	productidOptionsLoad();
 
 	$scope.dataPage = 1;
 	$scope.dataCount = 0;
@@ -140,8 +154,17 @@ angular.module('page')
 		});
 	};
 
+	$scope.productidOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.productidOptions.length; i ++) {
+			if ($scope.productidOptions[i].Id === optionKey) {
+				return $scope.productidOptions[i].Name;
+			}
+		}
+		return null;
+	};
 
 	$messageHub.onEntityRefresh($scope.loadPage($scope.dataPage));
+	$messageHub.onProductsModified(productidOptionsLoad);
 
 	$messageHub.onProductsSelected(function(event) {
 		$scope.masterEntityId = event.data.id;

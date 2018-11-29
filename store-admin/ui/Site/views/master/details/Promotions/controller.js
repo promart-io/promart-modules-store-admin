@@ -28,6 +28,9 @@ angular.module('page')
 		onEntityRefresh: function(callback) {
 			on('store-admin.Site.Promotions.refresh', callback);
 		},
+		onIndexModified: function(callback) {
+			on('store-admin.Site.Index.modified', callback);
+		},
 		onIndexSelected: function(callback) {
 			on('store-admin.Site.Index.selected', callback);
 		},
@@ -39,12 +42,23 @@ angular.module('page')
 .controller('PageController', function ($scope, $http, $messageHub) {
 
 	var api = '../../../../../../../../../../services/v3/js/store-admin/api/Site/Promotions.js';
+	var indexidOptionsApi = '../../../../../../../../../../services/v3/js/store-admin/api/Site/Index.js';
 
 	$scope.dateOptions = {
 		startingDay: 1
 	};
 	$scope.dateFormats = ['yyyy/MM/dd', 'dd-MMMM-yyyy', 'dd.MM.yyyy', 'shortDate'];
 	$scope.dateFormat = $scope.dateFormats[0];
+
+	$scope.indexidOptions = [];
+
+	function indexidOptionsLoad() {
+		$http.get(indexidOptionsApi)
+		.success(function(data) {
+			$scope.indexidOptions = data;
+		});
+	}
+	indexidOptionsLoad();
 
 	$scope.dataPage = 1;
 	$scope.dataCount = 0;
@@ -140,8 +154,17 @@ angular.module('page')
 		});
 	};
 
+	$scope.indexidOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.indexidOptions.length; i ++) {
+			if ($scope.indexidOptions[i].Id === optionKey) {
+				return $scope.indexidOptions[i].WelcomeMessage;
+			}
+		}
+		return null;
+	};
 
 	$messageHub.onEntityRefresh($scope.loadPage($scope.dataPage));
+	$messageHub.onIndexModified(indexidOptionsLoad);
 
 	$messageHub.onIndexSelected(function(event) {
 		$scope.masterEntityId = event.data.id;

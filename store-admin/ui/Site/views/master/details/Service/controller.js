@@ -28,6 +28,9 @@ angular.module('page')
 		onEntityRefresh: function(callback) {
 			on('store-admin.Site.Service.refresh', callback);
 		},
+		onServicesModified: function(callback) {
+			on('store-admin.Site.Services.modified', callback);
+		},
 		onServicesSelected: function(callback) {
 			on('store-admin.Site.Services.selected', callback);
 		},
@@ -39,12 +42,23 @@ angular.module('page')
 .controller('PageController', function ($scope, $http, $messageHub) {
 
 	var api = '../../../../../../../../../../services/v3/js/store-admin/api/Site/Service.js';
+	var servicesidOptionsApi = '../../../../../../../../../../services/v3/js/store-admin/api/Site/Services.js';
 
 	$scope.dateOptions = {
 		startingDay: 1
 	};
 	$scope.dateFormats = ['yyyy/MM/dd', 'dd-MMMM-yyyy', 'dd.MM.yyyy', 'shortDate'];
 	$scope.dateFormat = $scope.dateFormats[0];
+
+	$scope.servicesidOptions = [];
+
+	function servicesidOptionsLoad() {
+		$http.get(servicesidOptionsApi)
+		.success(function(data) {
+			$scope.servicesidOptions = data;
+		});
+	}
+	servicesidOptionsLoad();
 
 	$scope.dataPage = 1;
 	$scope.dataCount = 0;
@@ -140,8 +154,17 @@ angular.module('page')
 		});
 	};
 
+	$scope.servicesidOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.servicesidOptions.length; i ++) {
+			if ($scope.servicesidOptions[i].Id === optionKey) {
+				return $scope.servicesidOptions[i].Heading;
+			}
+		}
+		return null;
+	};
 
 	$messageHub.onEntityRefresh($scope.loadPage($scope.dataPage));
+	$messageHub.onServicesModified(servicesidOptionsLoad);
 
 	$messageHub.onServicesSelected(function(event) {
 		$scope.masterEntityId = event.data.id;

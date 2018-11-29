@@ -22,7 +22,6 @@
 			<thead>
 				<tr>
 					<th>#</th>
-					<th class="text-capitalize">Id</th>
 					<th class="text-capitalize">Name</th>
 					<th class="text-capitalize">Value</th>
 					<th></th>
@@ -31,7 +30,6 @@
 			<tbody>
 				<tr ng-repeat="next in data">
 					<td>{{(dataPage - 1) * dataLimit + $index + 1}}</td>
-					<td>{{next.Id}}</td>
 					<td>{{next.Name}}</td>
 					<td>{{next.Value}}</td>
 					<td>

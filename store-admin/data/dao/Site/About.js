@@ -1,7 +1,7 @@
 var query = require('db/v3/query');
 var daoApi = require('db/v3/dao');
 var dao = daoApi.create({
-	'table': 'VENDORX_ECOMM_SITE_ABOUT',
+	'table': 'PROMART_ECOMM_SITE_ABOUT',
 	'properties': [
 		{
 			'name': 'Id',
@@ -55,6 +55,6 @@ exports.count = function() {
 };
 
 exports.customDataCount = function() {
-	var resultSet = query.execute("SELECT COUNT(*) FROM VENDORX_ECOMM_SITE_ABOUT");
+	var resultSet = query.execute("SELECT COUNT(*) as COUNT FROM PROMART_ECOMM_SITE_ABOUT");
 	return resultSet !== null ? resultSet[0].COUNT : 0;
 };

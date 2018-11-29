@@ -22,7 +22,6 @@
 			<thead>
 				<tr>
 					<th>#</th>
-					<th class="text-capitalize">Id</th>
 					<th class="text-capitalize">WelcomeMessage</th>
 					<th class="text-capitalize">PromotionsHeading</th>
 					<th class="text-capitalize">BrandName</th>
@@ -33,7 +32,6 @@
 			<tbody>
 				<tr ng-repeat="next in data" ng-class="{'bg-info':next && next.Id == selectedEntity.Id}" style="cursor: pointer;" ng-click="selectEntity(next)">
 					<td>{{(dataPage - 1) * dataLimit + $index + 1}}</td>
-					<td>{{next.Id}}</td>
 					<td>{{next.WelcomeMessage}}</td>
 					<td>{{next.PromotionsHeading}}</td>
 					<td>{{next.BrandName}}</td>

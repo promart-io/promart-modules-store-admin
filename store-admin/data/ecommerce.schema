@@ -2,7 +2,7 @@
     "schema": {
         "structures": [
             {
-                "name": "VENDORX_ECOMM_PRODUCTS",
+                "name": "PROMART_ECOMM_PRODUCTS",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -84,7 +84,7 @@
                         "name": "PRICERRP"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_CATEGORIES",
+                "name": "PROMART_ECOMM_CATEGORIES",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -101,7 +101,7 @@
                         "name": "NAME"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SPECIFICATIONS",
+                "name": "PROMART_ECOMM_SPECIFICATIONS",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -128,7 +128,7 @@
                         "name": "PRODUCTID"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_UOM",
+                "name": "PROMART_ECOMM_UOM",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -145,7 +145,7 @@
                         "name": "NAME"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_CURRENCIES",
+                "name": "PROMART_ECOMM_CURRENCIES",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -162,7 +162,7 @@
                         "name": "NAME"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_MARKETPLACE",
+                "name": "PROMART_ECOMM_SITE_MARKETPLACE",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -189,7 +189,7 @@
                         "name": "SUBHEADING"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_INDEX",
+                "name": "PROMART_ECOMM_SITE_INDEX",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -241,7 +241,7 @@
                         "name": "SPECIALREQUESTTEXT"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_PROMOTIONS",
+                "name": "PROMART_ECOMM_SITE_PROMOTIONS",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -268,7 +268,7 @@
                         "name": "INDEXID"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_FEATURES",
+                "name": "PROMART_ECOMM_SITE_FEATURES",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -305,7 +305,7 @@
                         "name": "INDEXID"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_SLIDES",
+                "name": "PROMART_ECOMM_SITE_SLIDES",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -332,7 +332,7 @@
                         "name": "INDEXID"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_REVIEWS",
+                "name": "PROMART_ECOMM_REVIEWS",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -369,7 +369,7 @@
                         "name": "COMMENT"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_CLEARANCE",
+                "name": "PROMART_ECOMM_SITE_CLEARANCE",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -396,7 +396,7 @@
                         "name": "INDEXID"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_SERVICES",
+                "name": "PROMART_ECOMM_SITE_SERVICES",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -433,7 +433,7 @@
                         "name": "LISTHEADING"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_PANELS",
+                "name": "PROMART_ECOMM_SITE_PANELS",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -470,7 +470,7 @@
                         "name": "COLOR"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_SERVICE",
+                "name": "PROMART_ECOMM_SITE_SERVICE",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -502,7 +502,7 @@
                         "name": "SERVICESID"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_MENU",
+                "name": "PROMART_ECOMM_SITE_MENU",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -539,7 +539,7 @@
                         "name": "HOME"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_CONTACT",
+                "name": "PROMART_ECOMM_SITE_CONTACT",
                 "type": "TABLE",
                 "columns": [
                     {
@@ -651,7 +651,7 @@
                         "name": "SENDBUTTONTEXT"
                     }]
             }, {
-                "name": "VENDORX_ECOMM_SITE_ABOUT",
+                "name": "PROMART_ECOMM_SITE_ABOUT",
                 "type": "TABLE",
                 "columns": [
                     {

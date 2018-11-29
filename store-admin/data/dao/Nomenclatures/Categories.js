@@ -1,7 +1,7 @@
 var query = require('db/v3/query');
 var daoApi = require('db/v3/dao');
 var dao = daoApi.create({
-	'table': 'VENDORX_ECOMM_CATEGORIES',
+	'table': 'PROMART_ECOMM_CATEGORIES',
 	'properties': [
 		{
 			'name': 'Id',
@@ -39,6 +39,6 @@ exports.count = function() {
 };
 
 exports.customDataCount = function() {
-	var resultSet = query.execute("SELECT COUNT(*) FROM VENDORX_ECOMM_CATEGORIES");
+	var resultSet = query.execute("SELECT COUNT(*) as COUNT FROM PROMART_ECOMM_CATEGORIES");
 	return resultSet !== null ? resultSet[0].COUNT : 0;
 };
