@@ -56,5 +56,12 @@ exports.count = function() {
 
 exports.customDataCount = function() {
 	var resultSet = query.execute("SELECT COUNT(*) as COUNT FROM PROMART_ECOMM_SITE_ABOUT");
-	return resultSet !== null ? resultSet[0].COUNT : 0;
+	if (resultSet !== null && resultSet[0] !== null) {
+		if (resultSet[0].COUNT !== undefined && resultSet[0].COUNT !== null) {
+			return resultSet[0].COUNT;
+		} else if (resultSet[0].count !== undefined && resultSet[0].count !== null) {
+			return resultSet[0].count;
+		}
+	}
+	return 0;
 };
