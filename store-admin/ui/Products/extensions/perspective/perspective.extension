@@ -1,0 +1,5 @@
+{
+	"description": "Products perspective",
+	"extensionPoint": "launchpad-e-commerce-perspective",
+	"module": "store-admin/ui/Products/extensions/perspective/perspective.js"
+}

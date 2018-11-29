@@ -1,0 +1,5 @@
+{
+	"description": "Products view",
+	"extensionPoint": "launchpad-e-commerce-Products-Products-view",
+	"module": "store-admin/ui/Products/views/master/Products/master/extensions/view.js"
+}

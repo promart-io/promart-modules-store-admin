@@ -1,0 +1,5 @@
+{
+	"description": "Categories view",
+	"extensionPoint": "launchpad-e-commerce-Nomenclatures-view",
+	"module": "store-admin/ui/Nomenclatures/views/Categories/extensions/view.js"
+}

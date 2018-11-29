@@ -1,0 +1,4 @@
+{
+	"description": "Extension Point for the store-admin Menu Providers",
+	"name": "launchpad-store-admin-menu"
+}

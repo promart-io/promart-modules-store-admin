@@ -1,0 +1,5 @@
+{
+	"description": "About menu",
+	"extensionPoint": "shell-store-admin-menu",
+	"module": "store-admin/views/About/menu/item.js"
+}

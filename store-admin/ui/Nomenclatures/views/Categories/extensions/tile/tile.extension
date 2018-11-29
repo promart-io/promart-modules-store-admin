@@ -1,0 +1,5 @@
+{
+	"description": "Nomenclatures tiles",
+	"extensionPoint": "launchpad-e-commerce-tiles",
+	"module": "store-admin/ui/Nomenclatures/views/Categories/extensions/tile/tile.js"
+}

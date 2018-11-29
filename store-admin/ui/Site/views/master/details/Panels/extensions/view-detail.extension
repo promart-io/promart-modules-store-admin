@@ -1,0 +1,5 @@
+{
+	"description": "Panels view",
+	"extensionPoint": "launchpad-e-commerce-Site-Services-view",
+	"module": "store-admin/ui/Site/views/master/details/Panels/extensions/view.js"
+}

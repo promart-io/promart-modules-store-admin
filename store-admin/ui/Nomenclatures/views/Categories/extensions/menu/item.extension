@@ -1,0 +1,5 @@
+{
+	"description": "Categories menu",
+	"extensionPoint": "shell-store-admin-menu",
+	"module": "store-admin/views/Categories/menu/item.js"
+}

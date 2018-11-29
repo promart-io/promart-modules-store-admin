@@ -1,0 +1,5 @@
+{
+	"description": "Currencies view",
+	"extensionPoint": "launchpad-e-commerce-Nomenclatures-view",
+	"module": "store-admin/ui/Nomenclatures/views/Currencies/extensions/view.js"
+}

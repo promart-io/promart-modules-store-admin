@@ -1,0 +1,5 @@
+{
+	"description": "Currencies menu",
+	"extensionPoint": "shell-store-admin-menu",
+	"module": "store-admin/views/Currencies/menu/item.js"
+}

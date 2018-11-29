@@ -1,0 +1,5 @@
+{
+	"description": "Site tiles",
+	"extensionPoint": "launchpad-e-commerce-tiles",
+	"module": "store-admin/ui/Site/views/Marketplace/extensions/tile/tile.js"
+}

@@ -1,0 +1,5 @@
+{
+	"description": "About view",
+	"extensionPoint": "launchpad-e-commerce-Site-view",
+	"module": "store-admin/ui/Site/views/About/extensions/view.js"
+}

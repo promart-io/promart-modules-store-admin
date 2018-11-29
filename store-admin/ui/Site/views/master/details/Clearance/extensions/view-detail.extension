@@ -1,0 +1,5 @@
+{
+	"description": "Clearance view",
+	"extensionPoint": "launchpad-e-commerce-Site-Index-view",
+	"module": "store-admin/ui/Site/views/master/details/Clearance/extensions/view.js"
+}

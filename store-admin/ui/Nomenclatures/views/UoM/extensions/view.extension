@@ -1,0 +1,5 @@
+{
+	"description": "UoM view",
+	"extensionPoint": "launchpad-e-commerce-Nomenclatures-view",
+	"module": "store-admin/ui/Nomenclatures/views/UoM/extensions/view.js"
+}
