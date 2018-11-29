@@ -224,7 +224,7 @@
                     {
                         "name": "UoMId",
                         "dataName": "UOMID",
-                        "dataType": "VARCHAR",
+                        "dataType": "INTEGER",
                         "dataLength": 0,
                         "dataDefaultValue": "",
                         "dataPrimaryKey": "false",
@@ -311,7 +311,7 @@
                     {
                         "name": "CurrencyId",
                         "dataName": "CURRENCYID",
-                        "dataType": "VARCHAR",
+                        "dataType": "INTEGER",
                         "dataLength": 0,
                         "dataDefaultValue": "",
                         "dataPrimaryKey": "false",
